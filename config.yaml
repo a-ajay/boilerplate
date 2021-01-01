@@ -1,0 +1,67 @@
+# Deploy config
+
+port: 9988
+debug: true
+
+meta:
+  app_name: Boiler-Plate
+  app_desc: APP DESC
+  app_logo: img/logo.png
+
+variables:
+  connection_string: "mysql+pymysql://root:root@localhost/ipqa?charset=utf8"
+
+  variable_list:
+    - s_no
+    - area
+
+url:
+  # xxxxxxx-------------------AUTH-----------------------------xxxxxxxxx
+  login_page:
+    pattern: /login/
+    handler: AuthLoginHandler
+    # mechanism: ldap # basic, ldap
+    mechanism: basic
+    kwargs:
+      host: 152.63.1.50
+      port: 389
+      search_base: DC=CORP,DC=DRREDDYS,DC=COM
+      search_filter: (sAMAccountName={0})
+      user_dn: Corp\{0}
+
+  logout_page:
+    pattern: /logout/
+    handler: AuthLogoutHandler
+  # xxxxxxx-------------------AUTH-----------------------------xxxxxxxxx
+
+  # xxxxxx------------------------File Handler----------------------------xxxxx
+  app_home:
+    pattern: /home/
+    handler: FileHandler
+    path: static/html/index.html
+
+  # xxxxxx------------------------File Handler----------------------------xxxxx
+
+  # xxxxxx------------------------FN Handler----------------------------xxxxx
+
+  get_meta:
+    pattern: /get_meta
+    handler: FunctionHandler
+    function: get_meta
+
+  get_data:
+    pattern: /get_data
+    handler: FunctionHandler
+    function: get_data
+
+  # xxxxxx------------------------FN Handler----------------------------xxxxx
+
+  # xxxxxx------------------------FORM Handler--------------------------xxxxx
+
+  get_queries:
+    pattern: /get_queries
+    handler: FormHandler
+# xxxxxx------------------------FORM Handler--------------------------xxxxx
+
+# xxxxxx------------------------UPLOAD Handler--------------------------xxxxx
+# xxxxxx------------------------UPLOAD Handler--------------------------xxxxx

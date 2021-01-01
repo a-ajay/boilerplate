@@ -1,0 +1,10 @@
+sample:
+  default:
+    recent_page: [0]
+    win_id: [anil]
+  query: "
+  SELECT [report_id]
+  FROM [drlbacpac].[dbo].[user_report]
+  WHERE win_id='{win_id}'
+  "
+

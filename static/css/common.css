@@ -1,0 +1,141 @@
+@font-face {
+  font-family: app-font;
+  src: url("../fonts/Abeatbykai-8geZ.ttf");
+}
+
+body {
+  font-size: 1rem;
+  /* font-family: app-font; */
+}
+
+.v-max {
+  max-height: 90vh;
+  overflow-x: hidden;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bs-tooltip-top .arrow::before {
+  border-top-color: white !important;
+  box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.9);
+}
+
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: white !important;
+  box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.9);
+}
+
+.tooltip-inner {
+  background-color: white;
+  /* box-shadow: 2px 2px gray; */
+  box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.9);
+}
+
+.tooltip.show {
+  opacity: 1 !important;
+}
+
+.bgc-grey {
+  /* background-color: black; */
+  background-color: #dadcde;
+}
+
+.bgc-dark-grey {
+  background-color: #929292;
+}
+
+.bgc-blue {
+  background-color: #573e96;
+}
+
+.bgc-active {
+  background-color: #7a5cc6;
+}
+
+.bgc-inactive, .bgc-inactive>a {
+  background-color: #462e81;
+  color: #d8d8d8 !important;
+}
+
+a.disabled {
+  background-color: #462e81;
+  color: gray !important;
+}
+
+.font-brand {
+  font-size: 1.6rem;
+}
+
+li.active {
+  font-weight: bold;
+}
+
+.height-full {
+  height: 81vh;
+}
+
+.img-responsive {
+  height: 68vh;
+  /* max-height: 80vh; */
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0.8;
+  background: url("../img/loading.gif") 50% 50% no-repeat rgb(249, 249, 249);
+}
+
+/* Custom scroll style */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9d9d9d;
+  /* border: 2px solid #555555; */
+}
+
+/* Custom scroll style */
+
+.v-line {
+  border-left: 1px solid white;
+  height: 100%;
+}
+
+.div-search-box {
+  border: 0.1rem solid #6A57BD;
+  border-radius: 1rem;
+  background-color: #6A57BD;
+}
+
+.div-search-box input {
+  border: 0.1rem solid #6A57BD;
+  border-radius: 1rem;
+  background-color: #6A57BD;
+}
+
+.div-search-box input::placeholder {
+  color: wheat;
+}

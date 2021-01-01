@@ -1,0 +1,25 @@
+<table class="table table-bordered">
+  <tbody>
+    <thead>
+      <% _.each( _.keys(data[0]),function(key){ %>
+        <th>
+
+          <%=key%>
+        </th>
+      <% }) %>
+    </thead>
+
+    <% _.each(data,function(row){ %>
+
+    <tr>
+      <% _.each(row,function(v,k){ %>
+
+      <td scope="row">
+        <%=v%>
+      </td>
+      <% }) %>
+
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
